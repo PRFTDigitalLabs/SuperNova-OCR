@@ -1,0 +1,30 @@
+{
+  "name": "SuperNova-OCR",
+  "version": "1.0.0",
+  "description": "🚀 DESTROY ALIEN 🚀",
+  "private": true,
+  "main": "server/watcher-test.js",
+  "scripts": {
+    "start": "node server/watcher-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/truthlabs/SuperNova-OCR.git"
+  },
+  "author": "Dan Thompson <dan@truthlabs.com> (https://github.com/dt-tl/)",
+  "bugs": {
+    "url": "https://github.com/truthlabs/SuperNova-OCR/issues"
+  },
+  "homepage": "https://github.com/truthlabs/SuperNova-OCR#readme",
+  "dependencies": {
+    "numbers": "^0.6.0",
+    "opencv": "^5.0.0",
+    "underscore": "^1.8.3"
+  },
+  "config": {
+    "watcher": {
+      "index": 2,
+      "debug": true
+    }
+  }
+}
