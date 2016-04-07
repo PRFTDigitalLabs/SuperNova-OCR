@@ -28,12 +28,13 @@ var Watcher = function() {
   self.CVoptions = {
     camWidth: 1280,
     camHeight: 720,
-    interval: 50,
+    interval: 50, // refresh (polling) rate
     maskLowThresh: 0,
     maskHighThresh: 1,
-    threshold: 175,
+    threshold: 175, // http://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html?highlight=threshold#double threshold(InputArray src, OutputArray dst, double thresh, double maxval, int type)
     blurRadius: 3,
     maskFile: 'firepower-4player-mask.png'
+    //maskFile: 'firepower-1player-mask.png' // try changing this for just 1 player score
   };
 
   self.status = {
@@ -44,6 +45,8 @@ var Watcher = function() {
   // initialize function
   self.init = function() {
     try {
+      //to use your webcam, uncomment this line, and comment out the test code below
+      
       //self.camera = new cv.VideoCapture(self.settings.index);
 
       var testMOV = path.join(__dirname, 'img', 'firepower-4player.mp4');
@@ -102,7 +105,7 @@ var Watcher = function() {
         score = {
           rect: rect,
           isWide: false,
-          smooth: [0, 0, 0, 0, 0],
+          smooth: [0, 0, 0, 0, 0], //score must appear at least 3 times before being reported
           strValue: '00',
           intValue: 0,
           playerIndex: 0
@@ -127,6 +130,7 @@ var Watcher = function() {
       //center pixel of masked score region for color
       var val = ROI.pixel(Math.round(score.rect.height / 2), Math.round(score.rect.width / 2));
 
+//uncomment to verify mask regions
 /*
       var file = path.join(__dirname, 'img/watch', 'area' + index + '.png');
       ROI.save(file);
