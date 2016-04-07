@@ -44,10 +44,6 @@ brew install node
 wait $!
 sudo npm update -g
 wait $!
-npm install -g node-gyp
-wait $!
-brew reinstall pkg-config
-wait $!
 sudo npm install
 wait $!
 node server/install-test.js
