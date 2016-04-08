@@ -2,6 +2,10 @@
 
 A method for detecting scores from pre-DMD era pinball machines with [OpenCV](https://github.com/peterbraden/node-opencv) and [SSOCR](https://github.com/dt-tl/SSOCR)
 
+<p align='center'>
+<IMG SRC="https://cdn-images-1.medium.com/max/2000/0*l6bIW7vQ_DgQNV2Z.png">
+</p>
+
 This was written and tested on a MacBook Pro running OSX 10.11.4. Installing the prerequisites (and their prerequisites) may not work as expected in other environments.
 
 ## Installation
